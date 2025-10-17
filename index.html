@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vera HomeBuyers - Fast Cash for Your Home | We Buy Houses Nationwide</title>
+    <meta name="description" content="Vera HomeBuyers purchases homes for cash nationwide. Receive your guaranteed offer in 24 hours. Zero fees, zero repairs, close on your schedule.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+
+        .gradient-vera {
+            background: linear-gradient(135deg, #0EA5E9 0%, #3B82F6 50%, #1E40AF 100%);
+        }
+
+        .gradient-accent {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        }
+
+        .text-gradient-vera {
+            background: linear-gradient(135deg, #0EA5E9, #1E40AF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vera-blue': '#0EA5E9',
+                        'vera-dark': '#1E40AF',
+                        'vera-green': '#10B981',
+                        'vera-gray': '#64748B'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 gradient-vera rounded-xl flex items-center justify-center shadow-lg">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="font-poppins text-2xl font-bold text-gradient-vera">Vera HomeBuyers</h1>
+                        <p class="text-xs text-vera-gray font-semibold tracking-wide">America's Trusted Home Buyer</p>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#process" class="text-gray-700 hover:text-vera-blue transition font-medium py-2">Our Process</a>
+                    <a href="#advantages" class="text-gray-700 hover:text-vera-blue transition font-medium py-2">Advantages</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-vera-blue transition font-medium py-2">Success Stories</a>
+                    <a href="#contact" class="gradient-vera text-white px-6 py-2.5 rounded-full font-semibold hover-lift shadow-lg">Request Offer</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 p-2 rounded-lg hover:bg-gray-100">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-2">
+                <a href="#process" class="block text-gray-700 hover:text-vera-blue hover:bg-sky-50 py-2 px-3 rounded-lg font-medium">Our Process</a>
+                <a href="#advantages" class="block text-gray-700 hover:text-vera-blue hover:bg-sky-50 py-2 px-3 rounded-lg font-medium">Advantages</a>
+                <a href="#reviews" class="block text-gray-700 hover:text-vera-blue hover:bg-sky-50 py-2 px-3 rounded-lg font-medium">Success Stories</a>
+                <a href="#contact" class="block gradient-vera text-white py-2.5 px-3 rounded-lg font-semibold text-center shadow-md">Request Offer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <div class="inline-block bg-vera-blue/10 text-vera-dark px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <svg class="w-4 h-4 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Trusted by 750+ Homeowners Nationwide
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight font-poppins">
+                        Get Cash for Your Home
+                        <span class="text-gradient-vera block mt-2">Without the Wait</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Skip the traditional home sale hassles. We provide guaranteed cash offers within 24 hours and close on your timeline—as fast as 7 days or whenever works for you.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="#contact" class="gradient-vera text-white px-8 py-4 rounded-full font-bold text-lg hover-lift shadow-xl text-center flex items-center justify-center gap-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Get Your Offer
+                        </a>
+                        <a href="tel:+19415873856" class="bg-white text-vera-dark border-2 border-vera-dark px-8 py-4 rounded-full font-bold text-lg hover-lift shadow-lg text-center flex items-center justify-center gap-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            (941) 587-3856
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-vera-blue font-poppins">750+</div>
+                            <div class="text-sm text-gray-600 font-medium">Homes Purchased</div>
+                        </div>
+                        <div class="h-16 w-px bg-gray-300 mx-auto"></div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-vera-green font-poppins">24hr</div>
+                            <div class="text-sm text-gray-600 font-medium">Offer Guarantee</div>
+                        </div>
+                        <div class="h-16 w-px bg-gray-300 mx-auto"></div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-vera-dark font-poppins">0%</div>
+                            <div class="text-sm text-gray-600 font-medium">Fees or Costs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 gradient-vera rounded-3xl blur-3xl opacity-20 animate-pulse-slow"></div>
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="Modern Home" class="relative rounded-3xl shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="process" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-poppins">How Vera HomeBuyers Works</h2>
+                <p class="text-xl text-gray-600">Three simple steps to cash in hand</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-gradient-to-br from-sky-50 to-white p-8 rounded-2xl border border-sky-100 shadow-md">
+                    <div class="w-16 h-16 gradient-vera rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <div class="text-vera-blue text-sm font-bold mb-2 tracking-wider">STEP 1</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 font-poppins">Share Property Details</h3>
+                    <p class="text-gray-600 leading-relaxed">Reach out via phone, form, or email to tell us about your home. We'll ask a few basic questions—no pressure, no obligations attached.</p>
+                </div>
+
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border border-blue-100 shadow-md">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                        </svg>
+                    </div>
+                    <div class="text-blue-600 text-sm font-bold mb-2 tracking-wider">STEP 2</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 font-poppins">Get Your Cash Offer</h3>
+                    <p class="text-gray-600 leading-relaxed">Within 24 hours, we'll present a fair, competitive cash offer based on current market conditions. No waiting, no uncertainty.</p>
+                </div>
+
+                <div class="card-hover bg-gradient-to-br from-indigo-50 to-white p-8 rounded-2xl border border-indigo-100 shadow-md">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="text-indigo-600 text-sm font-bold mb-2 tracking-wider">STEP 3</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 font-poppins">Close & Receive Cash</h3>
+                    <p class="text-gray-600 leading-relaxed">Pick your closing date—we can close in as little as 7 days or wait months if you need time. You get cash, we handle everything else.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="advantages" class="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-sky-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-poppins">The Vera HomeBuyers Advantage</h2>
+                <p class="text-xl text-gray-600">Why homeowners nationwide trust us</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100">
+                    <div class="w-14 h-14 mb-4 text-vera-blue">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-poppins">Market-Driven Offers</h3>
+                    <p class="text-gray-600">Fair cash offers based on real-time local market data</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100">
+                    <div class="w-14 h-14 mb-4 text-amber-500">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-poppins">Lightning Fast</h3>
+                    <p class="text-gray-600">Close in 7 days or take months—your choice entirely</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100">
+                    <div class="w-14 h-14 mb-4 text-vera-green">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-poppins">As-Is Purchase</h3>
+                    <p class="text-gray-600">No repairs, no renovations, no cleaning required</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100">
+                    <div class="w-14 h-14 mb-4 text-red-500">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-poppins">Zero Hidden Costs</h3>
+                    <p class="text-gray-600">No commissions, no closing costs, no surprise fees</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100">
+                    <div class="w-14 h-14 mb-4 text-emerald-600">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-poppins">Guaranteed Close</h3>
+                    <p class="text-gray-600">No financing contingencies means deals never fall through</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100">
+                    <div class="w-14 h-14 mb-4 text-blue-600">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-poppins">Complete Privacy</h3>
+                    <p class="text-gray-600">Discreet process with full confidentiality guaranteed</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100">
+                    <div class="w-14 h-14 mb-4 text-indigo-600">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-poppins">Professional Team</h3>
+                    <p class="text-gray-600">Experienced staff guiding you every step of the way</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover border border-gray-100">
+                    <div class="w-14 h-14 mb-4 text-sky-600">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-poppins">Local Knowledge</h3>
+                    <p class="text-gray-600">Deep understanding of local real estate markets nationwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-poppins">Success Stories</h2>
+                <p class="text-xl text-gray-600">Hear from homeowners who sold to Vera</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-sky-50 to-white p-8 rounded-2xl shadow-lg border border-sky-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 gradient-vera rounded-full flex items-center justify-center text-white font-bold text-lg">R</div>
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">Robert M.</div>
+                            <div class="text-sm text-gray-600">Tampa, Florida</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-amber-400 mb-3">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">"Vera HomeBuyers handled my inherited property seamlessly. They gave me a fair price and closed in under two weeks. The entire process was transparent and professional."</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-blue-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg">L</div>
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">Linda H.</div>
+                            <div class="text-sm text-gray-600">Sarasota, Florida</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-amber-400 mb-3">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">"After going through a divorce, I needed to sell quickly. Vera made it easy and stress-free. No repairs needed, and they closed on my timeline. Highly recommend!"</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-2xl shadow-lg border border-indigo-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-full flex items-center justify-center text-white font-bold text-lg">D</div>
+                        <div class="ml-4">
+                            <div class="font-bold text-gray-900">David P.</div>
+                            <div class="text-sm text-gray-600">Fort Myers, Florida</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-amber-400 mb-3">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-700 italic leading-relaxed">"My rental property needed major work. Vera bought it as-is and made the whole transaction simple. Great communication, fair offer, smooth closing. Couldn't be happier."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-sky-900 via-blue-900 to-indigo-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 font-poppins">Request Your Cash Offer</h2>
+                <p class="text-xl opacity-90">Get a guaranteed offer within 24 hours—no obligations</p>
+            </div>
+
+            <form id="contactForm" class="bg-white rounded-3xl p-8 md:p-10 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">First Name *</label>
+                        <input type="text" id="firstName" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-vera-blue focus:border-transparent text-gray-900" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Last Name *</label>
+                        <input type="text" id="lastName" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-vera-blue focus:border-transparent text-gray-900" required>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-vera-blue focus:border-transparent text-gray-900" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-vera-blue focus:border-transparent text-gray-900" required>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Property Address *</label>
+                    <input type="text" id="propertyAddress" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-vera-blue focus:border-transparent text-gray-900" placeholder="Street Address, City, State ZIP" required>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Your Situation *</label>
+                    <textarea id="situation" rows="4" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-vera-blue focus:border-transparent text-gray-900" placeholder="Tell us why you're selling: relocation, downsizing, inherited property, financial hardship, etc." required></textarea>
+                </div>
+
+                <button type="submit" class="w-full gradient-vera text-white py-4 rounded-full font-bold text-lg hover-lift shadow-xl">
+                    Submit for Cash Offer
+                </button>
+
+                <p class="text-center text-gray-600 text-sm mt-4 flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    100% secure and confidential—we never share your information
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-vera rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold">Vera HomeBuyers</span>
+                    </div>
+                    <p class="text-gray-400">America's most trusted cash home buyer. Fast, fair, and transparent.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            (941) 587-3856
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            alex@verahomebuyers.com
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Serving All 50 States
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <div class="space-y-2">
+                        <a href="#process" class="block text-gray-400 hover:text-white transition">Our Process</a>
+                        <a href="#advantages" class="block text-gray-400 hover:text-white transition">Advantages</a>
+                        <a href="#reviews" class="block text-gray-400 hover:text-white transition">Success Stories</a>
+                        <a href="#contact" class="block text-gray-400 hover:text-white transition">Get Offer</a>
+                        <a href="login.html" class="block text-gray-400 hover:text-white transition">Dashboard Login</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Vera HomeBuyers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK v8 -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
